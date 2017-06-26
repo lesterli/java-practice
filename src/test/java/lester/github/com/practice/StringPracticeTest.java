@@ -17,4 +17,14 @@ public class StringPracticeTest {
         Assert.assertEquals('c', StringPractice.getFirstNonDuplicateChar("abbcad"));
     }
 
+    @Test
+    public void reverse() throws Exception {
+        Assert.assertEquals("a", StringPractice.reverse("a"));
+        Assert.assertEquals("cba", StringPractice.reverse("abc"));
+    }
+
+    @Test
+    public void count() throws Exception {
+        Assert.assertEquals(14, StringPractice.count(3));
+    }
 }
