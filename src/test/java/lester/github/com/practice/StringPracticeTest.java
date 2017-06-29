@@ -3,6 +3,8 @@ package lester.github.com.practice;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 /**
@@ -26,5 +28,16 @@ public class StringPracticeTest {
     @Test
     public void count() throws Exception {
         Assert.assertEquals(14, StringPractice.count(3));
+    }
+
+    @Test
+    public void testLambda() throws Exception {
+        Arrays.asList("a", "b", "c").forEach( e -> System.out.println(e));
+    }
+
+    @Test
+    public void testAddUsingString() throws Exception {
+        Assert.assertEquals("214", StringPractice.addUsingString("91", "123"));
+        Assert.assertEquals("937557391", StringPractice.addUsingString("19283746", "918273645"));
     }
 }
