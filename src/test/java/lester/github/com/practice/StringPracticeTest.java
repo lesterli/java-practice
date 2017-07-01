@@ -3,7 +3,10 @@ package lester.github.com.practice;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Arrays;
+import java.util.Date;
 
 import static org.junit.Assert.*;
 
@@ -39,5 +42,11 @@ public class StringPracticeTest {
     public void testAddUsingString() throws Exception {
         Assert.assertEquals("214", StringPractice.addUsingString("91", "123"));
         Assert.assertEquals("937557391", StringPractice.addUsingString("19283746", "918273645"));
+    }
+
+    @Test
+    public void testTimestamp() throws Exception {
+        LocalDateTime now = LocalDateTime.now().withNano(0);
+        Assert.assertEquals("2017-07-01 10:25:00", Timestamp.valueOf(now));
     }
 }

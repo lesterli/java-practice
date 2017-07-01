@@ -33,8 +33,8 @@ public class CountDownLatchDemo {
         } catch (InterruptedException e) {
 
         }
-        long estimatedTime = System.nanoTime() - startTime;
-        System.out.println("Spend time (ns): " + estimatedTime);
+        double estimatedTime = (System.nanoTime() - startTime)/Math.pow(10, 9);
+        System.out.println("Spend time (s): " + estimatedTime);
     }
 
 }
